@@ -1,0 +1,10 @@
+*.log
+.cache
+.DS_Store
+.idea
+node_modules
+.gitkeep
+converage
+typings
+typings.json
+dist

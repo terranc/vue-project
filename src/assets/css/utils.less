@@ -1,0 +1,395 @@
+/***********
+ * 布局
+ **********/
+
+// 盒子
+.block {
+  display: block
+}
+
+.inline-block {
+  display: inline-block
+}
+
+.full-width {
+  width: 100%
+}
+
+.relative {
+  position: relative
+}
+
+.absolute {
+  position: absolute
+}
+
+// 伸缩盒
+.flexbox {
+  box: horizontal middle space-between
+}
+
+.flexbox-vertical {
+  box: vertical middle
+}
+
+.flexbox-center {
+  box: center
+}
+
+.flexbox-right {
+  box: right
+}
+
+// 伸缩盒子元素
+.flex {
+  box-item: flex-auto
+}
+
+.flex-none {
+  box-item: flex-none
+}
+
+.flex-stretch {
+  box-item: middle stretch
+}
+
+.flex-left {
+  box-item: flex-left
+}
+
+.flex-right {
+  box-item: flex-right
+}
+
+.flex-1 {
+  box-item: flex-1
+}
+
+.flex-2 {
+  box-item: flex-2
+}
+
+.flex-3 {
+  box-item: flex-3
+}
+
+.flex-4 {
+  box-item: flex-4
+}
+
+// 内边距
+.pl10, .pl-base {
+  padding-left: rem(10)
+}
+
+.pr10, .pr-base {
+  padding-right: rem(10)
+}
+
+.pt10, .pt-base {
+  padding-top: rem(10)
+}
+
+.pb10, .pb-base {
+  padding-bottom: rem(10)
+}
+
+.pl20 {
+  padding-left: rem(20)
+}
+
+.pr20 {
+  padding-right: rem(20)
+}
+
+.pt20 {
+  padding-top: rem(20)
+}
+
+.pb20 {
+  padding-bottom: rem(20)
+}
+
+// 外边距
+.ml10, .ml-base {
+  margin-left: rem(10)
+}
+
+.mr10, .mr-base {
+  margin-right: rem(10)
+}
+
+.mt10, .mt-base {
+  margin-top: rem(10)
+}
+
+.mb10, .mb-base {
+  margin-bottom: rem(10)
+}
+
+.ml20 {
+  margin-left: rem(20)
+}
+
+.mr20 {
+  margin-right: rem(20)
+}
+
+.mt20 {
+  margin-top: rem(20)
+}
+
+.mb20 {
+  margin-bottom: rem(20)
+}
+
+// 对齐
+.ta-c {
+  text-align: center
+}
+
+.ta-l {
+  text-align: left
+}
+
+.ta-r {
+  text-align: right
+}
+
+.va-t {
+  vertical-align: top
+}
+
+.va-m {
+  vertical-align: middle
+}
+
+.va-b {
+  vertical-align: bottom;
+}
+
+// 行高
+.lh-100 {
+  line-height: 1
+}
+
+.lh-120 {
+  line-height: 1.2
+}
+
+.lh-150 {
+  line-height: 1.5
+}
+
+.lh-180 {
+  line-height: 1.8
+}
+
+// 背景色
+.bg-none {
+  background: none !important
+}
+
+.bg-white {
+  background-color: #fff
+}
+
+.bg-gray {
+  background-color: @bgGrayColor;
+}
+
+// 字体色
+.primary {
+  color: @primaryColor;
+}
+
+.white {
+  color: #fff;
+}
+
+.black {
+  color: @blackColor;
+}
+
+.gray {
+  color: @greyColor;
+}
+
+.dark-gray {
+  color: @textGreyColor;
+}
+
+.light-gray {
+  color: @lightGrey;
+}
+
+.red {
+  color: @redColor;
+}
+
+.green {
+  color: @greenColor;
+}
+
+// 字体粗细
+.thin {
+  font-weight: 200;
+}
+
+.bold {
+  font-weight: 700
+}
+
+// 字体大小
+.fs-12, .small {
+  font-size: rem(12)
+}
+
+.fs-14 {
+  font-size: rem(14)
+}
+
+.fs-16 {
+  font-size: rem(16)
+}
+
+.fs-18 {
+  font-size: rem(18)
+}
+
+.fs20 {
+  font-size: rem(20)
+}
+
+.fs22 {
+  font-size: rem(22)
+}
+
+.fs24 {
+  font-size: rem(24)
+}
+
+.fs26 {
+  font-size: rem(26)
+}
+
+.fs28 {
+  font-size: rem(28)
+}
+
+.fs30 {
+  font-size: rem(30)
+}
+
+.fs32 {
+  font-size: rem(32)
+}
+
+.fs34 {
+  font-size: rem(34)
+}
+
+.fs36 {
+  font-size: rem(36)
+}
+
+.fs38 {
+  font-size: rem(38)
+}
+
+.fs40 {
+  font-size: rem(40)
+}
+
+.fs44 {
+  font-size: rem(44)
+}
+
+.fs48 {
+  font-size: rem(48)
+}
+
+.fs60 {
+  font-size: rem(60)
+}
+
+//字体普通化
+.normal {
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+// 浮动
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+// 文字自动换行
+.break-word {
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+// 不换行
+.nowrap {
+  white-space: nowrap;
+}
+
+.no-select {
+  user-select: none;
+  cursor: default;
+}
+
+// 不可见
+.invisible {
+  visibility: hidden
+}
+
+// 隐藏
+.hide, .hidden {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+// 隐藏文本
+.hide-text {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0
+}
+
+
+.vertical-align {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+// 多行截断
+.vertical-clamp(@line: 2) {
+  overflow : hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: @line;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;  // 有些示例里需要定义该属性，实际可省略
+}
+// 单行阶段
+.single-clamp() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.nopadding{
+	padding: 0;
+	margin: 0;
+}

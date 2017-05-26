@@ -1,0 +1,40 @@
+{
+  "siteTitle": "DEMO",
+  "basePath": "./src/pages/",
+  "xhr": {
+    "base": "http://mobile.dev/",
+    "path": "api/wx"
+  },
+  "origin": "http://localhost:3335",
+  "cdn": {
+    "base": "",
+    "js": [
+      "//cdn.bootcss.com/vue/2.3.3/vue.min.js",
+      "//cdn.bootcss.com/vuex/2.3.1/vuex.min.js",
+      "//cdn.bootcss.com/vue-router/2.5.3/vue-router.min.js",
+      "//cdn.bootcss.com/axios/0.16.1/axios.min.js"
+    ],
+    "testjs": [
+      "//cdn.bootcss.com/vue/2.3.3/vue.js",
+      "//cdn.bootcss.com/vuex/2.3.1/vuex.min.js",
+      "//cdn.bootcss.com/vue-router/2.5.3/vue-router.min.js",
+      "//cdn.bootcss.com/axios/0.16.1/axios.min.js"
+    ],
+    "css": [
+      "//cdn.bootcss.com/weui/1.1.2/style/weui.min.css"
+    ],
+    "images": "http://opo0w023s.bkt.clouddn.com/"
+  },
+  "externals": {
+    "vue": "Vue",
+    "vue-router": "VueRouter",
+    "vuex": "Vuex",
+    "axios": "axios"
+  },
+  "settings": {
+    "serviceTel": "400-000-0000",
+    "wechat": {
+      "appId": ""
+    }
+  }
+}

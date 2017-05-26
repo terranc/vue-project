@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+html, body, form, h1, h2, h3, h4, h5, h6, p, dl, ul, ol, li, img {
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+a {
+    text-decoration: none; 
+    color: @primaryColor;
+}
+ul,ol {list-style:none}
+body, input, select, textarea, button {
+  font-family: "Helvetica Neue", Helvetica, "Microsoft Yahei UI Light", sans-serif;
+  font-size: inherit;
+}
+html,body {
+  height: 100%;
+  overflow: hidden;
+}
+body {
+  font-size: rem(14);
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -webkit-touch-callout: none;
+}
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+    color: rgb(224, 224, 224);
+}
+::-webkit-input-placeholder {
+    color: rgb(224, 224, 224);
+}
+[v-cloak] {
+  display: none;
+}

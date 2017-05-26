@@ -1,0 +1,199 @@
+@import '~vux/src/styles/reset.less';
+@import 'config.less';
+@import 'base.less';
+// @import 'wepayui.less';
+
+html {
+  .weui-cells:last-child {
+      margin-bottom: 1.17647059em;
+  }
+  .weui-cells__tips {
+    margin-top: 0.6em;
+    p {
+      margin: 0.5em 0;
+    }
+  }
+}
+
+body {
+	font-family: -apple-system, BlinkMacSystemFont, PingFang-SC-Regular, 'Hiragino Sans GB', 'Microsoft Yahei', Arial, sans-serif;
+	background-color: @bgColor;
+	color: @baseFontColor;
+  font-weight: 400;
+	-webkit-font-smoothing: antialiased;
+}
+h1 {
+  font-size: rem(24);
+  line-height: 1.4;
+	font-family: "PingFang SC","Helvetica Neue",Helvetica,"Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+}
+h2 {
+  font-size: rem(18);
+  line-height: 1.4;
+	font-family: "PingFang SC","Helvetica Neue",Helvetica,"Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+}
+h3 {
+  font-size: rem(16);
+  line-height: 1.4;
+	font-family: "PingFang SC","Helvetica Neue",Helvetica,"Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+}
+h4 {
+  font-size: rem(14);
+  line-height: 1.5;
+  margin: 1.33em 0;
+	font-family: "PingFang SC","Helvetica Neue",Helvetica,"Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+	padding: 0;
+	margin: 0;
+}
+.h5 {
+  font-size: rem(13);
+  line-height: rem(22);
+	padding: 0;
+	margin: 0;
+}
+a {
+	color: @redColor;
+	text-decoration: none;
+  @media @mobile{
+    outline: none; 
+  }
+	&:hover{
+		text-decoration: none;
+    cursor: pointer;
+    color: @redColor;
+	}
+}
+.cell-icon {
+  height: rem(20);
+  vertical-align: middle;
+  margin-right: rem(5);
+  display: block;
+}
+
+hr {
+    height: 0;
+    overflow: hidden;
+    font-size: 0;
+    border: none;
+    border-bottom: rem(1) solid @lineGreyColor;
+    background-color: transparent;
+    color: transparent;
+}
+p {
+    line-height: 1.4;
+}
+
+// 日志列表
+.logs-list {
+  .vux-cell-box > div {
+    width: 100%;
+    padding-right: 0;
+  }
+  .title {
+    .single-clamp();
+  }
+  .meta {
+    margin-top: rem(10);
+    font-size: rem(13);
+    color: @greyColor;
+  }
+}
+.container > .main {
+  padding-bottom: 1.17647059em;
+}
+// 文章
+.article-body {
+  padding: rem(20) rem(15);
+
+  h1.article-title {
+    margin-bottom: rem(15);
+  }
+  .article-meta {
+    margin: 0 0 rem(15);
+    color: @greyColor;
+    font-size: rem(14);
+  }
+  content {
+    .text;
+  }
+}
+
+// 登录、注册
+.logo-box {
+  text-align: center;
+  padding: rem(50) 0;
+
+  img {
+    height: rem(80);
+  }
+}
+
+// 图文列表
+.img-panel-list {
+  background-color: #fff;
+  li {
+    border-bottom: rem(1) solid @lineGreyColor;
+    list-style: none;
+    a {
+      display: block;
+      color: @baseFontColor;
+      padding: rem(15);
+      .clearfix;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+    .img {
+      float: left;
+      margin-right: rem(15);
+      width: rem(90);
+    }
+    .main {
+      overflow: hidden;
+
+      .meta {
+        font-size: rem(13);
+        color: @textGreyColor;
+        margin: rem(4) 0 rem(5);
+        .vertical-clamp(1);
+      }
+
+      p {
+        color: @textGreyColor;
+        font-size: rem(13);
+        line-height: 1.4;
+        .vertical-clamp(2);
+      }
+    }
+  }
+}
+// 暂无数据
+.no-data {
+  padding: rem(70) 0;
+  text-align: center;
+  color: @greyColor;
+  border: none !important;
+  width: 100%;
+  box-sizing: border-box;
+}
+// 加载更多
+.load-more-wrapper {
+  // background-color: #fff;
+  // display: flex;
+
+  .load-more {
+    border-top: none;
+    margin-top: 1.5em;
+    margin: 0 auto;
+    width: auto;
+
+    .weui-loadmore__tips {
+      display: block;
+      background-color: transparent;
+      position: static;
+      top: auto;
+      padding: 1.5em 0;
+    }
+  }
+}

@@ -1,0 +1,229 @@
+.line-height(@fontSize, @px) {
+	line-height: @px / @fontSize;
+}
+.img-responsive(@display: block) {
+  display: @display;
+  width: 100% \9; // Force IE10 and below to size SVG images correctly
+  max-width: 100%; // Part 1: Set a maximum relative to the parent
+  height: auto; // Part 2: Scale the height according to the width, otherwise you get stretching
+}
+.img-2x(@file-1x; @file-2x; @width-1x; @height-1x) {
+  background-image: url("@{file-1x}");
+
+  @media
+  only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (   min--moz-device-pixel-ratio: 2),
+  only screen and (     -o-min-device-pixel-ratio: 2/1),
+  only screen and (        min-device-pixel-ratio: 2),
+  only screen and (                min-resolution: 192dpi),
+  only screen and (                min-resolution: 2dppx) {
+    background-image: url("@{file-2x}");
+    background-size: @width-1x @height-1x;
+  }
+}
+.img-center(@width, @height) {
+  position: relative;
+  // make parent element width/height divisible by 2
+  width: floor((@width + 0.5) / 2) * 2;
+  height: floor((@height + 0.5) / 2) * 2;
+  img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+}
+// 大段文本字体及行距
+.text(@fontSize: @baseFontSize) {
+	font-size: rem(@fontSize);
+	.line-height(@fontSize, 26);
+  color: @textGreyColor;
+  font-weight: 300;
+  h1 {
+    margin: 0.67em 0;
+  }
+  h2 {
+    margin: 0.83em 0;
+  }
+  h3 {
+    margin: 1em 0;
+  }
+  h4 {
+    margin: 1.33em 0;
+  }
+  h5 {
+    margin: 1.67m 0;
+  }
+  h6 {
+    margin: 2.33m 0;
+  }
+
+	a {
+		text-decoration: none;
+		border-bottom: rem(1) solid @linkBlueColor;
+
+		&:focus,
+		&:hover{
+			border-bottom-color: @linkBlueColor;
+		}
+		&:active{
+
+		}
+		&:visited{
+
+		}
+
+    img {
+       display:block;
+    }
+	}
+  u {
+		text-decoration: none;
+		border-bottom: rem(1) solid @textGreyColor;
+  }
+	pre {
+		.pre;
+
+    code {
+      background-color: #FFF5F5;
+      margin: -rem(11) -rem(20) -rem(13);
+      .code;
+      font-size: rem(14);
+      padding: rem(11) rem(20) rem(13);
+      display: block;
+      overflow: auto;
+    }
+	}
+	code {
+		.code;
+	}
+	hr {
+		margin: rem(20) 0;
+	}
+	ol, ul {
+		padding-left: 2em;
+    margin: 1em 0;
+
+		li {
+			margin: rem(10) 0;
+		}
+	}
+  blockquote {
+    position: relative;
+    display: block;
+    padding: rem(64) rem(45) rem(35) rem(48);
+    color: @textGreyColor;
+    margin: rem(20) 0;
+    .line-height(@baseFontSize, 26);
+
+    &:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: '';
+      background: url("../images/i_quote.png") left top no-repeat;
+      background-size: contain;
+      width: rem(48);
+      height: rem(40);
+    }
+  }
+  img{
+    max-width: 100%;
+    min-width: 100%;
+  }
+  p {
+    margin: 1em 0;
+	  .line-height(@fontSize, 26);
+
+    &:first-child {
+      margin-top: 0;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+.pre {
+	background-color: #24242E;
+	font-size: rem(@preFontSize);
+	.line-height(@preFontSize, 24);
+	color: @preColor;
+	padding: rem(11) rem(20) rem(13);
+	white-space: normal;
+	break-word: break-all;
+	letter-spacing: rem(0);
+	// font-family: "PingFangSC-Regular";
+}
+.code {
+	background-color: rgba(255, 234, 234, 1);
+	font-size: rem(@codeFontSize);
+	.line-height(@codeFontSize, 24);
+	color: @redColor;
+	padding: rem(1) rem(5);
+	font-family: "PingFangSC-Regular";
+}
+
+
+// 浮动
+.pull-right{
+  float: right;
+}
+.pull-left{
+  float: left;
+}
+// 居中
+.margin-center{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// 文字浮动
+.text-center{
+	text-align: center;
+}
+.text-left{
+	text-align: left;
+}
+.text-right{
+	text-align: right;
+}
+
+// flex
+.flex-center{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  flex-direction: column;
+}
+.flex-between{
+  justify-content:space-between;
+}
+.flex-start{
+  justify-content:flex-start;
+}
+// 清除浮动
+.clearfix {
+  &:after{
+    content: ' ';
+    overflow: hidden;
+    clear: both;
+    font-size: 0;
+    display: block;
+  }
+}
+.size(@width, @height: @width){
+  width: @width * rem(1);
+  height: @height * rem(1);
+}
+// 全屏
+.full-screen > .container > .main{
+  width: auto;
+  max-width: none;
+}
+.password-input {
+  -webkit-text-security: disc;
+}
