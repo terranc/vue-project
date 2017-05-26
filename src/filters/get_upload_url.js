@@ -1,4 +1,4 @@
-var config = require('src/config.json');
+var config = require('config/config.json');
 export default (url, width = 0, height = 0, cut = 1) => {
   if (!url) { 
     return '';

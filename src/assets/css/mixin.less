@@ -180,41 +180,7 @@
   margin-left: auto;
   margin-right: auto;
 }
-
-// 文字浮动
-.text-center{
-	text-align: center;
-}
-.text-left{
-	text-align: left;
-}
-.text-right{
-	text-align: right;
-}
-
-// flex
-.flex-center{
-  display: flex;
-  justify-content:center;
-  align-items: center;
-  flex-direction: column;
-}
-.flex-between{
-  justify-content:space-between;
-}
-.flex-start{
-  justify-content:flex-start;
-}
-// 清除浮动
-.clearfix {
-  &:after{
-    content: ' ';
-    overflow: hidden;
-    clear: both;
-    font-size: 0;
-    display: block;
-  }
-}
+// size
 .size(@width, @height: @width){
   width: @width * rem(1);
   height: @height * rem(1);

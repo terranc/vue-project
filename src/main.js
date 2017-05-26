@@ -75,7 +75,7 @@ Vue.filter('go', go);
 Vue.filter('getUrl', getUrl);
 Vue.filter('join', join);
 
-const config = require('src/config.json');
+const config = require('config/config.json');
 
 
 import FastClick from 'fastclick';

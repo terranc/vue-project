@@ -3,7 +3,7 @@ import axios from 'axios';
 import Qs from 'qs';
 import store from 'src/store';
 
-const config = require('src/config.json');
+const config = require('config/config.json');
 let getHeaders = form => {
   return new Promise((resolve, reject) => {
     form.getLength((err, length) => {

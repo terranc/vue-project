@@ -23,11 +23,24 @@
   position: absolute
 }
 
+// 清除浮动
+.clearfix {
+  &:after{
+    content: ' ';
+    overflow: hidden;
+    clear: both;
+    font-size: 0;
+    display: block;
+  }
+}
 // 伸缩盒
 .flexbox {
   box: horizontal middle space-between
 }
 
+.flex-start{
+  justify-content:flex-start;
+}
 .flexbox-vertical {
   box: vertical middle
 }

@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import config from 'src/config.json';
+import config from 'config/config.json';
 // initial state
 const state = {
   isGlobalLoading: false,

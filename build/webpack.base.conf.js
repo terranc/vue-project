@@ -3,7 +3,7 @@ var utils = require('./utils')
 var config = require('../config')
 var vueLoaderConfig = require('./vue-loader.conf')
 var vuxLoader = require('vux-loader')
-var appConfig = require('../src/config.json')
+var appConfig = require('../config/config.json')
 var webpack = require('webpack')
 
 var flexbox = require('postcss-flexbox')()
@@ -31,6 +31,7 @@ const webpackConfig = {
     alias: {
       'vue$': 'vue/dist/vue',
       'src': resolve('src'),
+      'config': resolve('config'),
       'assets': resolve('src/assets'),
       'js': resolve('src/assets/js'),
       'css': resolve('src/assets/css'),
