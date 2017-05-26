@@ -12,7 +12,7 @@
 export default {
   data() {
     return {
-      headTitle: '页面不存在',
+      headTitle: '系统开小差了',
     };
   },
 };
