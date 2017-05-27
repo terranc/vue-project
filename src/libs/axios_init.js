@@ -42,9 +42,15 @@ export default () => {
         });
         config.data = fd;
       }
-      // config.data = Qs.stringify(config.data);
+      config.data = Qs.stringify(config.data);
       // 将提供了 form 参数的话将表单内 submit 按钮置为 loading 状态
-      store.commit('updateSubmitLoading', true);
+      // store.commit('updateSubmitLoading', true);
+      config.loadingTimer = setTimeout(() => {
+        store.commit('updateLoadingStatus', {
+          show: true,
+          text: '提交中..',
+        });
+      }, 300);
       // config.loadingTimer = setTimeout(() => {
       //   store.commit('updateLoadingStatus', { show: true });
       // }, 300);
@@ -69,9 +75,6 @@ export default () => {
   axios.interceptors.response.use(res => {
     clearTimeout(res.config.loadingTimer);
     store.commit('updateLoadingStatus', { show: false });
-    if (res.config.method === 'post') {
-      store.commit('updateSubmitLoading', false);
-    }
     if (res.status < 200 || res.data >= 400) {
       if (res.config.method === 'get' && res.status === 404) {
         // alert('资源不存在！');
